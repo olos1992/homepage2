@@ -1,0 +1,47 @@
+.main {
+    color: #73caca;
+    background-color: #234242;
+    padding: 30px;
+    line-height: 1.5;
+}
+
+.main__image {
+    max-width: 400px;
+    width: 90%;
+    border: 2px solid #fff;
+    transition: transform .2s;
+    background-color: rgba(0, 0, 0, 0.548);
+}
+
+.main__imageHide {
+    display: none;
+}
+
+.main__image:hover {
+    transform: scale(1.2);
+    filter: sepia(30%);
+}
+
+.main__buttonHide {
+    font-size: 15px;
+    font-weight: 700;
+    color: #8af5f594;
+    background-color: rgba(0, 0, 0, 0.342);
+    padding: 10px;
+    border: 3px solid #5f5252;
+}
+
+.main--contrast {
+    color: yellow;
+    background-color: #000;
+}
+
+.main__image--contrast {
+    border: 2px solid yellow;
+    background-color: rgb(0, 0, 0);
+}
+
+.main__buttonHide:hover {
+    color: #8af5f5d3;
+    background-color: rgba(0, 0, 0, 0);
+}

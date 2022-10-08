@@ -1,0 +1,39 @@
+.article {
+    text-align: justify;
+}
+
+.article__section {
+    text-align: justify;
+    padding: 10px;
+}
+
+.article__occupation {
+    color: #468888;
+}
+
+.article__motto {
+    display: block;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 18px;
+}
+
+.article__sectionTitle {
+    text-align: center;
+}
+
+.article__dropcap {
+    float: left;
+    font-size: 399%;
+    color: #cf142b;
+    margin: -13px 7px -13px 0;
+}
+
+
+.article__occupation--contrast {
+    color: yellow;
+}
+
+.article__dropcap--contrast {
+    color: yellow;
+}

@@ -1,0 +1,18 @@
+.hobby__title {
+    text-align: center;
+}
+
+.hobby__dropcap {
+    float: left;
+    font-size: 399%;
+    color: #cf142b;
+    margin: -13px 7px -13px 0;
+}
+
+.hobby__container {
+    overflow-x: auto;
+}
+
+.hobby__dropcap--contrast {
+    color: yellow;
+}
