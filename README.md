@@ -20,7 +20,8 @@ The website is built with use of:
 
 - *HTML5*
 - *CSS3*
-- *JavaScript*
+- *JavaScript with ES6+ features*
+- *BEM methodology*
 
 ## Example of the JS code
 
