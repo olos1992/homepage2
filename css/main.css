@@ -45,3 +45,31 @@
     color: #8af5f5d3;
     background-color: rgba(0, 0, 0, 0);
 }
+
+.main__button {
+    font-size: 15px;
+    font-weight: 700;
+    font-family: 'Raleway', sans-serif;
+    color: #8af5f594;
+    background-color: rgba(0, 0, 0, 0.342);
+    padding: 10px;
+    border: 3px solid #5f5252;
+}
+
+.main__button:hover {
+    background-color: black;
+    color: yellow;
+    border: 3px solid yellow;
+}
+
+.main__button--contrast {
+    color: yellow;
+    background-color: #000;
+    border: 3px solid yellow;
+}
+
+.main__button--contrast:hover {
+    color: #8af5f594;
+    background-color: rgba(0, 0, 0, 0.342);
+    border: 3px solid #5f5252;
+}
