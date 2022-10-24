@@ -1,46 +1,74 @@
-console.log("Witaj deweloperze!");
-
-let mainButton = document.querySelector(".js-mainButton");
-let bodyElement = document.querySelector(".js-body");
-let bodyHeaderH1 = document.querySelector(".js-bodyHeader");
-let bodyHeaderH2 = document.querySelector(".js-bodySubheader");
-let navigation = document.querySelector(".js-nav");
-let navigationLink = document.querySelector(".js-navLink");
-let mainElement = document.querySelector(".js-main");
-let occupation = document.querySelector(".js-occupation");
-let dropcap = document.querySelector(".js-dropcap");
-let image = document.querySelector(".js-image");
-let tableCaption = document.querySelector(".js-caption");
-let tableCell = document.querySelector(".js-tableCell");
-let buttonHide = document.querySelector(".js-buttonHide");
-
-mainButton.addEventListener("click", () => {
-    bodyElement.classList.toggle("body--contrast")
-    bodyHeaderH1.classList.toggle("body__header--contrast")
-    bodyHeaderH2.classList.toggle("body__subHeader--contrast")
-    navigation.classList.toggle("navigation--contrast")
-    navigationLink.classList.toggle("navigation__link--contrast")
-    mainButton.classList.toggle("main__button--contrast")
-    mainElement.classList.toggle("main--contrast")
-    occupation.classList.toggle("article__occupation--contrast")
-    dropcap.classList.toggle("article__dropcap--contrast")
-    image.classList.toggle("main__image--contrast")
-    tableCaption.classList.toggle("table__caption--contrast")
-    tableCell.classList.toggle("table__cell--contrast")
-
-    if (mainButton.classList.contains("main__button--contrast")) {
-        mainButton.innerText = "NORMALNY WIDOK STRONY";
-    } else {
-        mainButton.innerText = "WYSOKI KONTRAST STRONY";
+{
+    const welcome = () => {
+        console.log("Witaj deweloperze!");
     }
-});
 
-buttonHide.addEventListener("click", () => {
-    image.classList.toggle("main__imageHide")
+    const onChangeBackgroundClick = () => {
+        const bodyElement = document.querySelector(".js-body");
+        const bodyHeader = document.querySelector(".js-bodyHeader");
+        const bodySubHeader = document.querySelector(".js-bodySubheader");
+        const navigation = document.querySelector(".js-nav");
+        const navigationLink = document.querySelector(".js-navLink");
+        const mainElement = document.querySelector(".js-main");
+        const mainButtonColor = document.querySelector(".js-mainButton");
+        const occupation = document.querySelector(".js-occupation");
+        const dropcap = document.querySelector(".js-dropcap");
+        const image = document.querySelector(".js-image");
+        const tableCaption = document.querySelector(".js-caption");
+        const tableCell = document.querySelector(".js-tableCell");
+        bodyElement.classList.toggle("body--contrast");
+        bodyHeader.classList.toggle("body__header--contrast");
+        bodySubHeader.classList.toggle("body__subHeader--contrast");
+        navigation.classList.toggle("navigation--contrast");
+        navigationLink.classList.toggle("navigation__link--contrast");
+        mainButtonColor.classList.toggle("main__button--contrast");
+        mainElement.classList.toggle("main--contrast");
+        occupation.classList.toggle("article__occupation--contrast");
+        dropcap.classList.toggle("article__dropcap--contrast");
+        image.classList.toggle("main__image--contrast");
+        tableCaption.classList.toggle("table__caption--contrast");
+        tableCell.classList.toggle("table__cell--contrast");
+    };
 
-    if (image.classList.contains ("main__imageHide")) {
-        buttonHide.innerText = "POKAŻ ZDJĘCIE"
-    } else {
-        buttonHide.innerText = "UKRYJ ZDJĘCIE"
+    const onChangeTextClick = () => {
+
+        const mainButtonText = document.querySelector(".js-mainButton");
+
+        if (mainButtonText.classList.contains("main__button--contrast")) {
+            mainButtonText.innerText = "NORMALNY WIDOK STRONY";
+        } else {
+            mainButtonText.innerText = "WYSOKI KONTRAST STRONY";
+        }
     }
-});
+
+    const imageHide = () => {
+
+        const imageText = document.querySelector(".js-image");
+        const buttonHideText = document.querySelector(".js-buttonHide");
+
+        imageText.classList.toggle("main__imageHide")
+
+        if (imageText.classList.contains("main__imageHide")) {
+            buttonHideText.innerText = "POKAŻ ZDJĘCIE"
+        } else {
+            buttonHideText.innerText = "UKRYJ ZDJĘCIE"
+        }
+    }
+
+    const init = () => {
+
+        const buttonHide = document.querySelector(".js-buttonHide");
+        const mainButton = document.querySelector(".js-mainButton");
+
+        mainButton.addEventListener("click", onChangeBackgroundClick);
+        mainButton.addEventListener("click", onChangeTextClick);
+        buttonHide.addEventListener("click", imageHide);
+
+        welcome();
+    };
+
+    init();
+
+}
+
+
