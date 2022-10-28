@@ -1,13 +1,10 @@
 {
-        const mainButton = document.querySelector(".js-mainButton");
-        const image = document.querySelector(".js-image");
-        const buttonHide = document.querySelector(".js-buttonHide");
 
     const welcome = () => {
         console.log("Witaj deweloperze!");
     }
 
-    const onChangeBackgroundClick = () => {
+    const onChangeBackgroundClick = (mainButton, image) => {
         const bodyElement = document.querySelector(".js-body");
         const bodyHeader = document.querySelector(".js-bodyHeader");
         const bodySubHeader = document.querySelector(".js-bodySubheader");
@@ -32,7 +29,7 @@
         tableCell.classList.toggle("table__cell--contrast");
     };
 
-    const onChangeTextClick = () => {
+    const onChangeTextClick = (mainButton) => {
 
         if (mainButton.classList.contains("main__button--contrast")) {
             mainButton.innerText = "NORMALNY WIDOK STRONY";
@@ -41,28 +38,31 @@
         }
     }
 
-    const imageHide = () => {
+    const hideImage = (image, buttonHide) => {
 
-        const buttonHide = document.querySelector(".js-buttonHide");
+        image.classList.toggle("main__imageHide");
 
-        image.classList.toggle("main__imageHide")
+        buttonHide.innerText = image.classList.contains("main__imageHide") ? "POKAŻ ZDJĘCIE" : "UKRYJ ZDJĘCIE";
 
-        if (image.classList.contains("main__imageHide")) {
-            buttonHide.innerText = "POKAŻ ZDJĘCIE"
-        } else {
-            buttonHide.innerText = "UKRYJ ZDJĘCIE"
-        }
     }
 
     const init = () => {
 
         const mainButton = document.querySelector(".js-mainButton");
+        const image = document.querySelector(".js-image");
+        const buttonHide = document.querySelector(".js-buttonHide");
 
-        mainButton.addEventListener("click", onChangeBackgroundClick);
-        mainButton.addEventListener("click", onChangeTextClick);
-        buttonHide.addEventListener("click", imageHide);
+        mainButton.addEventListener("click", () => {
+            onChangeBackgroundClick(mainButton, image);
+            onChangeTextClick(mainButton);
+        });
+
+        buttonHide.addEventListener("click", () => {
+            hideImage(image, buttonHide);
+        });
 
         welcome();
+
     };
 
     init();
