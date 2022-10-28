@@ -25,18 +25,6 @@ The website is built with use of:
 
 ## Example of the JS code
 
-```js
-buttonHide.addEventListener("click", () => {
-    image.classList.toggle("main__imageHide")
-
-    if (image.classList.contains ("main__imageHide")) {
-        buttonHide.innerText = "POKAŻ ZDJĘCIE"
-    } else {
-        buttonHide.innerText = "UKRYJ ZDJĘCIE"
-    }
-});
-```
-
 ## Demo
 
 (https://olos1992.github.io/homepage2/)
