@@ -31,6 +31,12 @@
     border: 3px solid #5f5252;
 }
 
+.main__buttonHide--contrast {
+    color: yellow;
+    background-color: #000;
+    border: 3px solid yellow;
+}
+
 .main--contrast {
     color: yellow;
     background-color: #000;
