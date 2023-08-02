@@ -1,7 +1,7 @@
 {
 
     const welcome = () => {
-        console.log("Witaj deweloperze!");
+        console.log("Witaj deweloperze!!!");
     }
 
     const onChangeBackgroundClick = (mainButton, image, buttonHide) => {
