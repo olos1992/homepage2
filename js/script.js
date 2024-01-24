@@ -1,5 +1,5 @@
 {
-
+q
     const welcome = () => {
         console.log("Witaj deweloperze!!!");
     }
